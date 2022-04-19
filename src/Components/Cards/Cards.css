@@ -59,7 +59,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 .iconsCardCont {
   display: flex;
@@ -67,7 +67,7 @@
   background: var(--bs-l-mode-default-mid-dark-grey);
   padding: 1em;
   width: 10.7%;
-  margin-right: 19px;
+  /* margin-right: 19px; */
   border-radius: 12px;
   margin-bottom: 28px;
   align-items: center;

@@ -5,7 +5,7 @@ export const StepCards = () => {
     {
       icon: "/img/check_value_icon.svg",
       title: "Check the value of your asset.",
-      txt: "Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.",
+      txt: "Select your device & tell us about it's current condition, and our advanced AI tech will tailor make the perfect price for you.",
     },
     {
       icon: "/img/schedule_for_inspection_icon.svg",
