@@ -1,0 +1,30 @@
+.hero_section {
+  position: relative;
+  padding-top: 5em;
+}
+.iconsCardsSection {
+  padding: 4em;
+  position: relative;
+}
+.StepsSection {
+  padding: 4em;
+  background: #fbfbfb;
+  position: relative;
+}
+.WPTU_Section {
+  padding: 4em;
+}
+.Best_Offers_Section {
+  padding: 4em;
+  background: #fbfbfb;
+  position: relative;
+}
+.soundsGood_section {
+  padding: 4em;
+  position: relative;
+}
+.partners_section {
+  padding: 4em 0em;
+  background: #ffffff;
+  position: relative;
+}

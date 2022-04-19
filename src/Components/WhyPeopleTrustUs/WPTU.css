@@ -1,0 +1,50 @@
+.WPTU_Area1_head {
+  font-size: 32px;
+  font-weight: 700;
+}
+.WPTU_Area1_Body_step1_cont_txt_div_title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.WPTU_Area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.WPTU_Area1_Body_step1_cont_txt_div_para {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7a7a7a;
+}
+
+.WPTU_Area1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.WPTU_Area1_Body_steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.WPTU_Area1_Body_step1_cont {
+  display: flex;
+  gap: 10px;
+}
+.WPTU_Area2 {
+  width: 100%;
+  position: relative;
+}
+
+.WPTU_img1 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.WPTU_img2 {
+  position: relative;
+  margin-left: 6em;
+}
