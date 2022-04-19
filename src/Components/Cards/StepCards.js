@@ -3,19 +3,21 @@ import "./Cards.css";
 export const StepCards = () => {
   const stepsDiv = [
     {
-      icon: "",
-      title: "Check Price",
+      icon: "/img/check_value_icon.svg",
+      title: "Check the value of your asset.",
       txt: "Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.",
     },
     {
-      icon: "",
-      title: "Schedule Pickup",
-      txt: "Book a free pickup from your home or work at a time slot as per your convenience",
+      icon: "/img/schedule_for_inspection_icon.svg",
+
+      title: "Schedule for Inspection.",
+      txt: "Book an appointment for collateral inspection at home or the nearest Egoras branch.",
     },
     {
-      icon: "",
-      title: "Get paid instantly",
-      txt: "Did we mention you get paid as soon as our executive picks up your device? It’s instant & secure payment all the way!",
+      icon: "/img/get_paid_instantly_icon.svg",
+
+      title: "Get paid instantly.",
+      txt: "We are determined to make sure you have access to sufficient funds immediately after inspection of your assets.",
     },
   ];
   return (
@@ -36,10 +38,7 @@ export const StepCards = () => {
           <div className="stepsDivAreaBody">
             {stepsDiv.map((data) => (
               <div className="stepsDivAreaCont">
-                <div
-                  className="stepsDivAreaCon
-                tTitleCont"
-                >
+                <div className="stepsDivAreaContTitleCont">
                   <img src={data.icon} className="stepsDivAreaContTitleIcon" />
                   <div className="stepsDivAreaContTitleTxt">{data.title}</div>
                 </div>

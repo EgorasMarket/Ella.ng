@@ -15,7 +15,7 @@
 .WPTU_Area1_Body_step1_cont_txt_div_para {
   font-size: 14px;
   font-weight: 700;
-  color: #7a7a7a;
+  color: var(--bs-l-mode-default-darker-grey);
 }
 
 .WPTU_Area1 {

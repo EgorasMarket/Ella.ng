@@ -1,14 +1,22 @@
 :root {
   --bs-l-mode-default-color: #ffffff;
   --bs-l-mode-default-light-grey: #c9c9c9;
+  --bs-l-mode-default-mid-light-grey: #fbfbfb;
   --bs-l-mode-default-mid-grey: #f6f6f6;
+  --bs-l-mode-default-mid-dark-grey: #f3f3f3;
+  --bs-l-mode-default-mid-darker-grey: #d1d1d1;
   --bs-l-mode-default-dark-grey: #b7b7b7;
-  --bs-l-mode-default-dark-grey: #b7b7b7;
-  --bs-l-mode-default-green: #229e54;
+  --bs-l-mode-default-darker-grey: #858585;
+  --bs-l-mode-default-black-color: #000000;
+  --bs-l-mode-default-green: #388f6f;
+  --bs-l-mode-default-light-green: #b8ffcd;
+  --bs-l-mode-secondary-green: #6fb684;
+  --bs-l-mode-default_darker-green-shadow: #095639;
+  --bs-l-mode-default_darker-green: #05442c;
   --bs-l-mode-default-peach: #e4a788;
   --bs-l-mode-default-peach-shadow: #e9b092;
-  --bs-l-mode-default-green-shadow: #60b482;
-  --bs-d-mode-default-green: #0d6efd;
+  --bs-l-mode-default-green-shadow: #67c2a0;
+  --bs-l-mode-default-light-green-shadow: #c1e5d8;
 }
 * {
   margin: 0;
@@ -16,7 +24,9 @@
   font-family: "Mulish", sans-serif;
   text-decoration: none !important;
 }
-
+body {
+  background: var(--bs-l-mode-default-color) !important;
+}
 html {
   scroll-behavior: smooth;
   transition: 2s ease-in;

@@ -1,8 +1,8 @@
 .sounds_good_area {
-  background: #f2fcf6;
+  background: var(--bs-l-mode-default-green);
   min-height: 385px;
   border-radius: 10px;
-  box-shadow: 0px 18px 40px #b6e6c8;
+  box-shadow: 0px 18px 40px var(--bs-l-mode-default-green-shadow);
   padding: 2em;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
 .sounds_good_area_txt_cont_txt {
   font-size: 60px;
   font-weight: 700;
-  color: #1e954e;
+  color: var(--bs-l-mode-default-color);
 }
 .card_dots {
   position: absolute;
@@ -28,4 +28,21 @@
   bottom: -48%;
   border-radius: 50%;
   width: 44%;
+}
+.soundsGoodBtn {
+  background-color: var(--bs-l-mode-default-color);
+  color: var(--bs-l-mode-default-green);
+  padding: 0.6em 3em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px 7px 19px var(--bs-l-mode-default_darker-green-shadow);
+  transition: 0.3s ease-in;
+  font-weight: 700;
+}
+.soundsGoodBtn:hover {
+  background-color: var(--bs-l-mode-default-light-green);
+  color: var(--bs-l-mode-default_darker-green);
+  box-shadow: -1px 7px 19px var(--bs-l-mode-default_darker-green-shadow);
+  transform: translate3d(0, -5px, 0);
+  transition: 0.3s ease-in-out;
 }

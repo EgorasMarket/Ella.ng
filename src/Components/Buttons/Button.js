@@ -31,7 +31,7 @@ export const RegButton = (props) => {
   return (
     <>
       <a href={props.href}>
-        <button className="LoginBtn">{props.txt}</button>
+        <button className={props.className}>{props.txt}</button>
       </a>
     </>
   );
