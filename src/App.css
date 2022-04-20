@@ -62,3 +62,22 @@ input:-internal-autofill-selected {
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   border: none !important;
 }
+
+.react-multiple-carousel__arrow::before {
+  color: #000 !important;
+  display: block;
+  font-weight: 900 !important;
+}
+
+.react-multiple-carousel__arrow {
+  background: #ffffff9c !important;
+}
+.react-multiple-carousel__arrow:hover {
+  background: #ffffff !important;
+}
+.react-multiple-carousel__arrow--left {
+  left: calc(4% + -55px) !important;
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(4% + -55px) !important;
+}

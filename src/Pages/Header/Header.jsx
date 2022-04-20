@@ -10,6 +10,7 @@ const Header = () => {
           <div className="header_area">
             <div className="header_logo">
               <img src="/img/ella_logo.svg" alt="" className="header_img" />
+              <span className="poweredBy">Powered by Egoras.</span>
             </div>
             {/* <SearchBar placeHolder="Start typing..." /> */}
             <LoginButton txt="Login" href="/login" />
