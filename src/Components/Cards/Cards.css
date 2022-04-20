@@ -6,9 +6,10 @@
   height: 100%;
   max-width: 1400px;
   margin: auto;
-  padding-left: 29em;
+  padding-left: 25em;
   padding-right: 0em;
-  padding-top: 0em;
+  padding-top: 4em;
+  gap: 50px;
 }
 .hero_card_cont4,
 .hero_card_cont2,
@@ -16,11 +17,12 @@
 .hero_card_cont1 {
   background: var(--bs-l-mode-default-green);
   position: relative;
+  overflow: hidden;
   /* color: #fff; */
 }
 
 .hero_card_area1 {
-  width: 100%;
+  width: 83%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -29,7 +31,7 @@
   width: 100%;
 }
 .hero_card_img {
-  width: 100%;
+  width: 70%;
 }
 .hero_card_area1_title {
   font-size: 38px;
@@ -42,7 +44,12 @@
   font-size: 18px;
   color: var(--bs-l-mode-default-color);
 }
-
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .iconsCardsDiv {
   display: flex;
   flex-direction: column;
