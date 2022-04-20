@@ -40,6 +40,8 @@ export const submitItemSpec = (service, brand, model) => async (dispatch) => {
      
       } catch (error) {
           console.log(error.response);
+        //   console.log(error.response);
+
           return {
               success: false,
               data: error.response,
