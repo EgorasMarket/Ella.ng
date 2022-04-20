@@ -17,31 +17,31 @@ const BgHeroCards = () => {
       id: "1",
       className: "hero_card_cont1",
       img: "/img/bannerImages/phones_piled_image.png",
-      BgTitle: "Looking for your next phone?",
+      BgTitle: "Looking for a place to sell your phone?",
       BgPara: "Free Pickup | Instant Payment",
     },
     {
       key: "2a",
       id: "2",
       className: "hero_card_cont2",
-      img: "/img/bannerImages/hero_card_cars.png",
-      BgTitle: "Looking for your next phone?",
+      img: "/img/bannerImages/generator_png.png",
+      BgTitle: "Sell your generator at the best price.",
       BgPara: "Free Pickup | Instant Payment",
     },
     {
       key: "3a",
       id: "3",
       className: "hero_card_cont3",
-      img: "/img/bannerImages/hero_card_cars.png",
-      BgTitle: "Looking for your next phone?",
+      img: "/img/bannerImages/fridge_group.png",
+      BgTitle: "Sell your refrigerator at the best price.",
       BgPara: "Free Pickup | Instant Payment",
     },
     {
       key: "4a",
       id: "4",
       className: "hero_card_cont4",
-      img: "/img/bannerImages/phones_piled_image.png",
-      BgTitle: "Looking for your next phone?",
+      img: "/img/bannerImages/laptop_group.png",
+      BgTitle: "Looking for a place to sell your Laptop?",
       BgPara: "Free Pickup | Instant Payment",
     },
   ];
@@ -49,11 +49,11 @@ const BgHeroCards = () => {
     <div className="hero_cards">
       <Carousel
         responsive={responsive}
-        // className="caroCard"
-        autoPlaySpeed={5000}
+        // className="storiesCard"
         showDots={false}
-        autoPlay={true}
         infinite={true}
+        autoPlaySpeed={10000}
+        // customTransition="all .5"
       >
         {BgHeroCards.map((data) => (
           <div className={data.className} key={data.key}>
@@ -67,6 +67,7 @@ const BgHeroCards = () => {
               </div>
             </div>
             <WaveAnimation />
+            <img src="/img/banner-bg.png" className="banner-bg" />
           </div>
         ))}
       </Carousel>

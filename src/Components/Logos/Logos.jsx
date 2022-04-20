@@ -14,7 +14,7 @@ const Logos = () => {
   return (
     <div className="logosDiv">
       <div className="Logos_area">
-        <Marquee speed={50} pauseOnHover={true}>
+        <Marquee speed={50} pauseOnHover={true} gradientColor="[255, 255, 255]">
           {Partners.map((data) => (
             <img src={data.img} className="partnerLogo" />
           ))}

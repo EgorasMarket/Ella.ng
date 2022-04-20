@@ -1,39 +1,39 @@
 import React from "react";
-// import { carIcon } from "../Icons/Icons";
+// import { phoneIcon } from "../Icons/Icons";
 import "./Cards.css";
 export const IconCards = (props) => {
   const iconCardDetails = [
     {
-      img: "/img/carIcon.png",
-      txt: "Sell Car",
-    },
-    {
-      img: "/img/carIcon.png",
+      img: "/img/phoneIcon.svg",
       txt: "Sell Phone",
     },
     {
-      img: "/img/carIcon.png",
+      img: "/img/laptopIcon.svg",
       txt: "Sell Laptop",
     },
     {
-      img: "/img/carIcon.png",
+      img: "/img/tvIcon.svg",
       txt: "Sell TV",
     },
     {
-      img: "/img/carIcon.png",
+      img: "/img/tabletIcon.svg",
       txt: "Sell Tablet",
     },
     {
-      img: "/img/carIcon.png",
+      img: "/img/desktopIcon.svg",
       txt: "Sell Desktop",
     },
     {
-      img: "/img/carIcon.png",
-      txt: "Sell Desktop",
+      img: "/img/homeTheaterIcon.svg",
+      txt: "Sell Home Theater",
     },
     {
-      img: "/img/carIcon.png",
-      txt: "Sell Desktop",
+      img: "/img/refrigeratorIcon.svg",
+      txt: "Sell Refrigerator",
+    },
+    {
+      img: "/img/generatorIcon.svg",
+      txt: "Sell Generator",
     },
   ];
   return (
