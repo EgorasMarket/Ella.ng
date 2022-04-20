@@ -1,0 +1,19 @@
+.header_area {
+  display: flex;
+  align-items: center;
+  padding: 1em 0em;
+  justify-content: space-between;
+}
+
+.header_img {
+  width: 170px;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  background: var(--bs-l-mode-default-mid-grey);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+}

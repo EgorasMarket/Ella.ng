@@ -1,0 +1,13 @@
+.header_input_area {
+  width: 60%;
+}
+.searchInput {
+  padding: 0.7em 2em;
+  width: 100%;
+  padding-left: 1em;
+  border: solid 1px var(--bs-l-mode-default-dark-grey);
+  border-radius: 5px;
+}
+.searchInput::placeholder {
+  color: var(--bs-l-mode-default-light-grey);
+}

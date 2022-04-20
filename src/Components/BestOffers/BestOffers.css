@@ -1,0 +1,27 @@
+.BestOffersDivArea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.BestOffersDivArea_head {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.BestOffersDivArea_Cards_Area {
+  display: flex;
+  align-items: center;
+  /* max-width: 103px; */
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.BestOffersDivArea_Cards_Area_Card1 {
+  max-width: 50%;
+  /* max-height: 236px; */
+  border-radius: 10px;
+  overflow: hidden;
+}
+.BestOffersDivArea_Cards_Area_Card1_img {
+  width: 100%;
+}

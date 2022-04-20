@@ -1,0 +1,31 @@
+.sounds_good_area {
+  background: #f2fcf6;
+  min-height: 385px;
+  border-radius: 10px;
+  box-shadow: 0px 18px 40px #b6e6c8;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.sounds_good_area_txt_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.sounds_good_area_txt_cont_txt {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1e954e;
+}
+.card_dots {
+  position: absolute;
+  left: -14%;
+  bottom: -48%;
+  border-radius: 50%;
+  width: 44%;
+}

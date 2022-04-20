@@ -1,0 +1,31 @@
+.saleFormDiv {
+  position: absolute;
+  min-width: 325px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 25%;
+  left: 16%;
+  background: #fff;
+  padding: 2em 1.5em;
+  border-radius: 10px;
+  padding-top: 1em;
+}
+.saleFormHeadingTab {
+  text-align: center;
+  border-bottom: solid 2px #229e54;
+  padding-bottom: 0.5em;
+  color: #229e54;
+}
+.salesInputArea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form_select_input {
+  width: 100%;
+  padding: 1em 1em;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 0px 5px #c9c9c9;
+}
