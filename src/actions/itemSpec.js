@@ -47,7 +47,7 @@ export const submitItemSpec = (service, brand, model) => async (dispatch) => {
     }
   };
 
-export const depositToken = (customer_id, tokenSymbol, transType) => async (dispatch) => {
+export const submitItemSpecFull = ( fullname, phoneNumber, emailAddress, stateLocation, address, appointmentDate, service, brand, model, ItemState) => async (dispatch) => {
 //   console.log(payload1, pin);
   const config = {
     headers: {
@@ -57,7 +57,7 @@ export const depositToken = (customer_id, tokenSymbol, transType) => async (disp
 
     try {
 
-        const payload = JSON.stringify({customer_id, tokenSymbol, transType});
+        const payload = JSON.stringify({service, brand, model});
   
         // console.log(payload);
 

@@ -74,6 +74,12 @@ const SaleForm = ({ submitItemSpec }) => {
       let res3 = await submitItemSpec(service, brand, model);
 
       console.log(res3);
+
+      if (res3.data.success === true) {
+        localStorage.setItem("productID", res3.data.entryId);
+      } else {
+        console.log('Something went wrong, try again later.');
+      }
       
     }
   }
