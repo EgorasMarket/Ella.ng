@@ -4,11 +4,7 @@ import AppointmentForm from "../../Components/Forms/AppointmentForm";
 const BookAnAppointment = () => {
   return (
     <div className="bookAppointmentDiv">
-      <div className="bookAppointmentSection">
-        <div className="container">
-          <div className="bookAppointmentArea"></div>
-        </div>
-      </div>
+      <AppointmentForm />
     </div>
   );
 };

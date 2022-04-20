@@ -40,6 +40,8 @@ export const submitItemSpec = (service, brand, model) => async (dispatch) => {
     };
   } catch (error) {
     console.log(error.response);
+    //   console.log(error.response);
+
     return {
       success: false,
       data: error.response,
@@ -71,10 +73,10 @@ export const submitItemSpecFull =
     try {
       const payload = JSON.stringify({ service, brand, model });
 
-      // console.log(payload);
+      console.log(payload);
 
       let res6 = await axios.post(
-        api_url2 + "/v1/wallet/deposit/token",
+        api_url2 + "/v1/outrightSell/submit/outright/sell/part",
         payload,
         config
       );
