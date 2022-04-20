@@ -12,70 +12,85 @@ import {
 // import setAuthToken from "../utils/setAuthToken";
 // import setAuthToken from "../utils/setAuthToken";
 
-
-
 export const submitItemSpec = (service, brand, model) => async (dispatch) => {
   //   console.log(payload1, pin);
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-  
-      try {
-  
-          const payload = JSON.stringify({service, brand, model});
-    
-          console.log(payload);
-  
-          let res6 = await axios.post(api_url2+"/v1/outrightSell/submit/outright/sell/part", payload, config)
-  
-          // console.log(res6);
-  
-          return {
-              success: true,
-              data: res6.data,
-              // address: walletAddress
-            };
-     
-      } catch (error) {
-          console.log(error.response);
-          return {
-              success: false,
-              data: error.response,
-          };
-    }
-  };
-
-export const submitItemSpecFull = ( fullname, phoneNumber, emailAddress, stateLocation, address, appointmentDate, service, brand, model, ItemState) => async (dispatch) => {
-//   console.log(payload1, pin);
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
 
-    try {
+  try {
+    const payload = JSON.stringify({ service, brand, model });
 
-        const payload = JSON.stringify({service, brand, model});
-  
-        // console.log(payload);
+    console.log(payload);
 
-        let res6 = await axios.post(api_url2+"/v1/wallet/deposit/token", payload, config)
+    let res6 = await axios.post(
+      api_url2 + "/v1/outrightSell/submit/outright/sell/part",
+      payload,
+      config
+    );
 
-        // console.log(res6);
+    // console.log(res6);
 
-        return {
-            success: true,
-            data: res6.data,
-            // address: walletAddress
-          };
-    
-    } catch (error) {
-        console.log(error.response);
-        return {
-            success: false,
-            data: error.response,
-        };
-    }
+    return {
+      success: true,
+      data: res6.data,
+      // address: walletAddress
+    };
+  } catch (error) {
+    console.log(error.response);
+    return {
+      success: false,
+      data: error.response,
+    };
+  }
 };
+
+export const submitItemSpecFull =
+  (
+    fullname,
+    phoneNumber,
+    emailAddress,
+    stateLocation,
+    address,
+    appointmentDate,
+    service,
+    brand,
+    model,
+    ItemState
+  ) =>
+  async (dispatch) => {
+    //   console.log(payload1, pin);
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const payload = JSON.stringify({ service, brand, model });
+
+      // console.log(payload);
+
+      let res6 = await axios.post(
+        api_url2 + "/v1/wallet/deposit/token",
+        payload,
+        config
+      );
+
+      // console.log(res6);
+
+      return {
+        success: true,
+        data: res6.data,
+        // address: walletAddress
+      };
+    } catch (error) {
+      console.log(error.response);
+      return {
+        success: false,
+        data: error.response,
+      };
+    }
+  };
