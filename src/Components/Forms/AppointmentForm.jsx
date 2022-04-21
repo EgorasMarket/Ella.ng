@@ -64,15 +64,29 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
     }
     // setSellData({ ...sellData, u: e });
   };
+  const LocationList = [
+    {
+      value: "No 25 Clemedy Plaze, Aba Express Way, PH",
+      label: "No 25 Clemedy Plaze, Aba Express Way, PH",
+    },
+    {
+      value: "No 282 Aba Road by Rumuokwurushi Junction, PH",
+      label: "No 282 Aba Road by Rumuokwurushi Junction, PH",
+    },
+    {
+      value: "Kilometer Oro-owo, 7 Ikwerre Rd, Rumueme, Port Harcourt",
+      label: "Kilometer Oro-owo, 7 Ikwerre Rd, Rumueme, Port Harcourt",
+    },
+  ];
   const menuItem = [
     {
-      value: "Rumukwrushi",
+      value: "Rumukwrushi HQ",
     },
     {
-      value: "Agip",
+      value: "Agip Branch",
     },
     {
-      value: "Oyigbo",
+      value: "Oyigbo Branch",
     },
   ];
 
@@ -131,7 +145,8 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
         }
       } else {
         setSuccessModal(false);
-
+        setErrorModal(true);
+        setErrorMessage("Please check your internet connection");
         console.log("Please check your internet connection");
       }
     }
@@ -141,7 +156,7 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
     <>
       {successModal === true ? (
         <SuccessModal
-          successMessage="Submitted successfully"
+          successMessage="Your appointment was booked successfully."
           click={PageReload}
         />
       ) : errorModal === true ? (
@@ -160,14 +175,18 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
                 value={fullname}
                 onChange={handleChange}
               />
-              <TxtFieldInputTxt
-                className="appointment_input_area"
-                label="Email address*"
-                type="email"
-                name="emailAddress"
-                value={emailAddress}
-                onChange={handleChange}
-              />
+              <div className="email_input">
+                <TxtFieldInputTxt
+                  className="appointment_input_area"
+                  label="Email address"
+                  type="email"
+                  name="emailAddress"
+                  value={emailAddress}
+                  onChange={handleChange}
+                />
+                <span className="optional">Optional*</span>
+              </div>
+
               <TxtFieldInputNumber
                 className="appointment_input_area"
                 label="Phone Number*"

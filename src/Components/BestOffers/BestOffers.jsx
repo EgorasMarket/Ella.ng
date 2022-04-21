@@ -3,13 +3,13 @@ import "./BestOffers.css";
 const BestOffers = () => {
   const BestOfferImg = [
     {
-      img: "/img/Iphone13Banner.jpeg",
+      img: "/img/Iphone13Banner.jpg",
     },
     {
-      img: "/img/LaptopBanner.jpeg",
+      img: "/img/LaptopBanner.jpg",
     },
     {
-      img: "/img/morePhones.jpeg",
+      img: "/img/morePhones.jpg",
     },
   ];
 

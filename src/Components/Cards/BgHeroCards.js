@@ -18,7 +18,7 @@ const BgHeroCards = () => {
       className: "hero_card_cont1",
       img: "/img/bannerImages/phones_piled_image.png",
       BgTitle: "Looking for a place to sell your phone?",
-      BgPara: "Free Pickup | Instant Payment",
+      BgPara: "Instant Payment",
     },
     {
       key: "2a",
@@ -26,7 +26,7 @@ const BgHeroCards = () => {
       className: "hero_card_cont2",
       img: "/img/bannerImages/generator_png.png",
       BgTitle: "Sell your generator at the best price.",
-      BgPara: "Free Pickup | Instant Payment",
+      BgPara: "Instant Payment",
     },
     {
       key: "3a",
@@ -34,7 +34,7 @@ const BgHeroCards = () => {
       className: "hero_card_cont3",
       img: "/img/bannerImages/fridge_group.png",
       BgTitle: "Sell your refrigerator at the best price.",
-      BgPara: "Free Pickup | Instant Payment",
+      BgPara: "Instant Payment",
     },
     {
       key: "4a",
@@ -42,7 +42,7 @@ const BgHeroCards = () => {
       className: "hero_card_cont4",
       img: "/img/bannerImages/laptop_group.png",
       BgTitle: "Looking for a place to sell your Laptop?",
-      BgPara: "Free Pickup | Instant Payment",
+      BgPara: "Instant Payment",
     },
   ];
   return (
