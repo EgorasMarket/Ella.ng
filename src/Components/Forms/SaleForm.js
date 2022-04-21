@@ -1,73 +1,32 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { FunctionButton } from "../Buttons/Button";
 import "./Forms.css";
 import Demo from "./Demo";
-
+import { TxtFieldInputTxt } from "../TextFields/TxtFieldInput";
 import { submitItemSpec } from "../../actions/itemSpec";
-
+import BookAnAppointment from "../../Pages/AppointmentPage/BookAnAppointment";
 const SaleForm = ({ submitItemSpec }) => {
-
   const [sellData, setSellData] = useState({
     service: "",
     brand: "",
-    model: ""
-  })
+    model: "",
+  });
+  const [appointmentDiv, setAppointmentDiv] = useState(false);
 
-  const {service, brand, model} = sellData;
+  const { service, brand, model } = sellData;
 
-  const Services = [
-    { title: "Mobile Phone", year: 1994 },
-    { title: "Laptop", year: 1972 },
-    { title: "Tablet", year: 1972 },
-    { title: "Desktop", year: 1972 },
-    { title: "Gaming Consoles", year: 1972 },
-    { title: "Smartwatch", year: 1972 },
-    { title: "Television", year: 1972 },
-    { title: "Smart Speaker", year: 1972 },
-    { title: "DSLR Camera", year: 1972 },
-    { title: "Earbuds", year: 1972 },
-    { title: "Cars", year: 1972 },
-  ];
-  const Brands = [
-    { title: "Apple", year: 1994 },
-    { title: "Xiaomi", year: 1972 },
-    { title: "Samsung", year: 1972 },
-    { title: "Vivo", year: 1972 },
-    { title: "Oppo", year: 1972 },
-    { title: "Lenovo", year: 1972 },
-    { title: "Realme", year: 1972 },
-    { title: "Huawei", year: 1972 },
-    { title: "Infinix", year: 1972 },
-    { title: "Tecno", year: 1972 },
-    { title: "Nokia", year: 1972 },
-  ];
-  const Model = [
-    { title: "Apple iPhone 5", year: 1994 },
-    { title: "Apple iPhone 5s", year: 1972 },
-    { title: "Apple iPhone 5c", year: 1972 },
-    { title: "Apple iPhone 6", year: 1972 },
-    { title: "Apple iPhone 7", year: 1972 },
-    { title: "Apple iPhone 8 Plus", year: 1972 },
-    // { title: "Apple iPhone 8 Plus", year: 1972 },
-    // { title: "Apple iPhone 8 Plus", year: 1972 },
-    // { title: "Apple iPhone 8 Plus", year: 1972 },
-    // { title: "Apple iPhone 8 Plus", year: 1972 },
-    // { title: "Apple iPhone 8 Plus", year: 1972 },
-  ];
-
-
-  const handleChange = (e, u) => {
-    console.log(e, u);
-    setSellData({ ...sellData, [u]: e });
-
-  }
+  const handleChange = (e) => {
+    // console.log(e);
+    // setSellData({ ...sellData, u: e });
+    setSellData({ ...sellData, [e.target.name]: e.target.value });
+  };
 
   const submitData = async (e) => {
     // alert('ok')
-    
-    if (service === '' || brand === '' || model === '') {
-      console.log('Please supply all fields');
+
+    if (service === "" || brand === "" || model === "") {
+      console.log("Please supply all fields");
     } else {
       console.log(service, brand, model);
 
@@ -76,14 +35,13 @@ const SaleForm = ({ submitItemSpec }) => {
       console.log(res3);
 
       if (res3.data.success === true) {
+        setAppointmentDiv(true);
         localStorage.setItem("productID", res3.data.entryId);
       } else {
-        console.log('Something went wrong, try again later.');
+        console.log("Something went wrong, try again later.");
       }
-      
     }
-  }
-
+  };
 
   return (
     <div className="saleFormDiv">
@@ -91,17 +49,37 @@ const SaleForm = ({ submitItemSpec }) => {
         <div className="saleFormHeadingTab">Sell</div>
       </div>
       <div className="salesInputArea">
-        <Demo placeHolder="Select Service" options={Services} onChange={handleChange} value={service} names='service' />
-        <Demo placeHolder="Select Brand" options={Brands} onChange={handleChange} value={brand} names='brand' />
-        <Demo placeHolder="Select Model" options={Model} onChange={handleChange} value={model} names='model' />
+        <TxtFieldInputTxt
+          label="Select Service"
+          // options={Services}
+          type="text"
+          onChange={handleChange}
+          value={service}
+          name="service"
+        />
+        <TxtFieldInputTxt
+          label="Select Brand"
+          type="text"
+          // options={Brands}
+          onChange={handleChange}
+          value={brand}
+          name="brand"
+        />
+        <TxtFieldInputTxt
+          label="Select Model"
+          type="text"
+          // options={Model}
+          onChange={handleChange}
+          value={model}
+          name="model"
+        />
 
-        <FunctionButton  txt="Sell Now" click={submitData} />
+        <FunctionButton txt="Sell Now" click={submitData} />
       </div>
+      {appointmentDiv == true ? <BookAnAppointment /> : null}
     </div>
   );
 };
-
-
 
 const mapStateToProps = (state) => ({
   // isAuthenticated: state.auth.isAuthenticated,

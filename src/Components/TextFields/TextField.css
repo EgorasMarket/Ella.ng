@@ -1,0 +1,21 @@
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: solid 1px !important;
+  border-color: #0000003b !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline:hover {
+  border: solid 1px !important;
+  border-color: #58b62cbd !important;
+}
+.css-j5h6pi-MuiPopper-root {
+  z-index: 130000 !important;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  font-family: "Mulish", sans-serif !important;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: "Mulish", sans-serif !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: "Mulish", sans-serif !important;
+  color: var(--bs-l-mode-default-green) !important;
+}

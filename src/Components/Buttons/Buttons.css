@@ -12,6 +12,7 @@
   border: none;
   box-shadow: -1px 7px 19px var(--bs-l-mode-default-green-shadow);
   transition: 0.3s ease-in;
+  width: 100%;
 }
 .LoginBtn:hover {
   background-color: var(--bs-l-mode-default-peach);
