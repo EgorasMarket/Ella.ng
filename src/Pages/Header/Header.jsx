@@ -1,7 +1,7 @@
 import React from "react";
 import "../../Assets/Css/Header.css";
 import { LoginButton } from "../../Components/Buttons/Button";
-import { SearchBar } from "../../Components/SearchBar/SearchBar";
+// import { SearchBar } from "../../Components/SearchBar/SearchBar";
 const Header = () => {
   return (
     <div className="headerContainer">

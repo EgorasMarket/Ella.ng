@@ -5,9 +5,18 @@
   height: 100vh;
   background: #0000009e;
   left: 0;
-  z-index: 10000;
+  z-index: 1110;
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.bookAppointmentDiv_Area {
+  background: grey;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: none;
 }
