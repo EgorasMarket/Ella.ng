@@ -40,6 +40,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  z-index: 100000;
   /* gap: 20px; */
 }
 .appointment_form_input {
@@ -51,4 +53,18 @@
   font-size: 24px;
   text-align: center;
   font-weight: 700;
+  width: 100%;
+}
+.book_an_appointment_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.close_appointment_icon {
+  font-size: 28px;
+  background: #b9e2d3;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px;
+  color: #388f6f;
 }

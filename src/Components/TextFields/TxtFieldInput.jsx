@@ -72,6 +72,14 @@ export const TxtFieldInputDate = (props) => {
     </LocalizationProvider>
   );
 };
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
 export const BasicSelect = (props) => {
   const [age, setAge] = React.useState("");
 
@@ -82,17 +90,21 @@ export const BasicSelect = (props) => {
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">{props.label}</InputLabel>
+        <InputLabel id="demo-simple-select-label">{props.labelId}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={props.value}
+          name={props.name}
+          onChange={props.onChange}
           label={props.label}
-          onChange={handleChange}
         >
-          <MenuItem value={10}>Ten</MenuItem>
+          {props.menuItem.map((data) => (
+            <MenuItem value={data.value}>{data.value}</MenuItem>
+          ))}
+          {/* <MenuItem value={>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
         </Select>
       </FormControl>
     </Box>
