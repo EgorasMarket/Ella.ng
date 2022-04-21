@@ -3,20 +3,26 @@
   --bs-l-mode-default-light-grey: #c9c9c9;
   --bs-l-mode-default-mid-light-grey: #fbfbfb;
   --bs-l-mode-default-mid-grey: #f6f6f6;
+  --bs-l-mode-default-grey: grey;
   --bs-l-mode-default-mid-dark-grey: #f3f3f3;
   --bs-l-mode-default-mid-darker-grey: #d1d1d1;
+  --bs-l-mode-default-transparent-light-grey: #ffffff9c;
   --bs-l-mode-default-dark-grey: #b7b7b7;
   --bs-l-mode-default-darker-grey: #858585;
   --bs-l-mode-default-black-color: #000000;
+  --bs-l-mode-default-transparent-black-color: #0000009e;
   --bs-l-mode-default-green: #388f6f;
   --bs-l-mode-default-light-green: #b8ffcd;
+  --bs-l-mode-default-lighter-green: #b9e2d3;
   --bs-l-mode-secondary-green: #6fb684;
   --bs-l-mode-default_darker-green-shadow: #095639;
   --bs-l-mode-default_darker-green: #05442c;
   --bs-l-mode-default-peach: #e4a788;
   --bs-l-mode-default-peach-shadow: #e9b092;
   --bs-l-mode-default-green-shadow: #67c2a0;
-  --bs-l-mode-default-light-green-shadow: #c1e5d8;
+  --bs-l-mode-default-light-green: #c1dfd4;
+  --bs-l-mode-default-light-green2: #97c4b4;
+  --bs-l-mode-default-lighter-green-shadow: #c1e5d8;
 }
 * {
   margin: 0;
@@ -34,7 +40,7 @@ html {
 
 a {
   text-decoration: none !important;
-  color: #229e54;
+  color: var(--bs-l-mode-default-green);
 }
 li {
   list-style: none;
@@ -64,16 +70,16 @@ button:focus {
 } */
 
 .react-multiple-carousel__arrow::before {
-  color: #000 !important;
+  color: var(--bs-l-mode-default-black-color) !important;
   display: block;
   font-weight: 900 !important;
 }
 
 .react-multiple-carousel__arrow {
-  background: #ffffff9c !important;
+  background: var(--bs-l-mode-default-transparent-light-grey) !important;
 }
 .react-multiple-carousel__arrow:hover {
-  background: #ffffff !important;
+  background: var(--bs-l-mode-default-color) !important;
 }
 .react-multiple-carousel__arrow--left {
   left: calc(4% + -55px) !important;

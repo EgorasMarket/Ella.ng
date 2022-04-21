@@ -1,6 +1,6 @@
 .footerSection {
   padding: 4em 0em;
-  background: #f6f6f6;
+  background: var(--bs-l-mode-default-mid-grey);
 }
 
 .footerArea {
@@ -23,14 +23,14 @@
   width: 100%;
 }
 .horizontal_rule {
-  background: grey;
-  color: grey;
+  background: var(--bs-l-mode-default-grey);
+  color: var(--bs-l-mode-default-grey);
   width: 100%;
 }
 .footer_txt {
   font-size: 14px;
   text-align: center;
-  color: #888888;
+  color: var(--bs-l-mode-default-darker-grey);
   padding: 2em;
   padding-top: 0em;
 }
@@ -39,16 +39,16 @@
 }
 .footer_icon {
   font-size: 35px !important;
-  border: 2px solid #388f6f;
+  border: 2px solid var(--bs-l-mode-default-green);
   border-radius: 50%;
   padding: 2px;
   cursor: pointer;
-  color: #388f6f;
+  color: var(--bs-l-mode-default-green);
   transition: 0.3s all linear;
 }
 .footer_icon:hover {
-  border: solid 2px #388f6f;
-  background: #388f6f;
-  color: #fff;
+  border: solid 2px var(--bs-l-mode-default-green);
+  background: var(--bs-l-mode-default-green);
+  color: var(--bs-l-mode-default-color);
   transition: 0.3s all linear;
 }

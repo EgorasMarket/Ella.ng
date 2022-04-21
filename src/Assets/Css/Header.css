@@ -31,3 +31,20 @@
   width: 100%;
   justify-content: flex-end;
 }
+.header_link_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_link {
+  color: var(--bs-l-mode-default-black-color);
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.vl {
+  width: 1.5px;
+  height: 34px;
+  background: var(--bs-l-mode-default-light-green2);
+  margin-right: 15px;
+}

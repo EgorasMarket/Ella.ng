@@ -10,7 +10,9 @@
   padding: 2em 1.5em;
   border-radius: 10px;
   padding-top: 1em;
+  box-shadow: 0px 0px 10px var(--bs-l-mode-default-transparent-black-color);
 }
+
 .saleFormHeadingTab {
   text-align: center;
   border-bottom: solid 2px var(--bs-l-mode-default-green);
@@ -31,12 +33,12 @@
 }
 .appointment_formDiv {
   padding: 2em;
-  background: #fff;
+  background: var(--bs-l-mode-default-color);
   border-radius: 10px;
   min-width: 0px;
   width: 100%;
   max-width: 470px;
-  box-shadow: 0px 0px 10px #000;
+  box-shadow: 0px 0px 10px var(--bs-l-mode-default-black-color);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -62,9 +64,9 @@
 }
 .close_appointment_icon {
   font-size: 28px;
-  background: #b9e2d3;
+  background: var(--bs-l-mode-default-lighter-green);
   border-radius: 5px;
   cursor: pointer;
   padding: 2px;
-  color: #388f6f;
+  color: var(--bs-l-mode-default-green);
 }

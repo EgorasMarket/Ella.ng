@@ -13,7 +13,19 @@ const Header = () => {
               <span className="poweredBy">Powered by Egoras.</span>
             </div>
             {/* <SearchBar placeHolder="Start typing..." /> */}
-            <LoginButton txt="Login" href="/login" />
+            <div className="header_link_area">
+              <a href="#" className="header_link">
+                Buy Now
+              </a>
+              <a href="#" className="header_link">
+                Save Now
+              </a>
+              <a href="#" className="header_link">
+                Support
+              </a>
+              <span className="vl"></span>
+              <LoginButton txt="Sell Now" href="/login" />
+            </div>
           </div>
         </div>
       </section>

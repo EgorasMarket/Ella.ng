@@ -1,10 +1,10 @@
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   border: solid 1px !important;
-  border-color: #0000003b !important;
+  border-color: var(--bs-l-mode-default-light-green) !important;
 }
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline:hover {
   border: solid 1px !important;
-  border-color: #58b62cbd !important;
+  border-color: var(--bs-l-mode-default-green) !important;
 }
 .css-j5h6pi-MuiPopper-root {
   z-index: 130000 !important;
