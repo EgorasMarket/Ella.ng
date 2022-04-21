@@ -22,7 +22,9 @@
   --bs-l-mode-default-green-shadow: #67c2a0;
   --bs-l-mode-default-light-green: #c1dfd4;
   --bs-l-mode-default-light-green2: #97c4b4;
+  --bs-l-mode-default-error-color: #ff575a;
   --bs-l-mode-default-lighter-green-shadow: #c1e5d8;
+  --bs-l-mode-default-error-color-shadow: #ffc2c3;
 }
 * {
   margin: 0;

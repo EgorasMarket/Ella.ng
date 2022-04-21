@@ -2,10 +2,10 @@ import React, { useEffect, useCallback, useState } from "react";
 import { connect } from "react-redux";
 import { FunctionButton } from "../Buttons/Button";
 import "./Forms.css";
-import Demo from "./Demo";
+import AppointmentForm from "./AppointmentForm";
 import { TxtFieldInputTxt, BasicSelect } from "../TextFields/TxtFieldInput";
 import { submitItemSpec } from "../../actions/itemSpec";
-import BookAnAppointment from "../../Pages/AppointmentPage/BookAnAppointment";
+// import BookAnAppointment from "../../Pages/AppointmentPage/BookAnAppointment";
 const SaleForm = ({ submitItemSpec }) => {
   const [sellData, setSellData] = useState({
     service: "",
@@ -118,9 +118,7 @@ const SaleForm = ({ submitItemSpec }) => {
 
         <FunctionButton txt="Sell Now" click={submitData} />
       </div>
-      {appointmentDiv == true ? (
-        <BookAnAppointment onClick={closeAppointmentDiv} />
-      ) : null}
+      {appointmentDiv == true ? <AppointmentForm /> : null}
     </div>
   );
 };

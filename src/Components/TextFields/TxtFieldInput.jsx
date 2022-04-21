@@ -46,6 +46,10 @@ export const TxtFieldInputNumber = (props) => {
         id="fullWidth"
         className="txtField"
         type={props.type}
+        name={props.name}
+        value={props.value}
+        onChange={props.onChange}
+
       />
     </Box>
   );
@@ -53,18 +57,23 @@ export const TxtFieldInputNumber = (props) => {
 export const TxtFieldInputDate = (props) => {
   const [value, setValue] = React.useState(new Date("mm/dd/yyyy"));
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
+  function handleChange(inputVal, inputName) {
+    console.log(inputVal, inputName);
+    // Here, we invoke the callback with the new value
+    props.onChange(inputVal, inputName);
+  }
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <DesktopDatePicker
           label={props.label}
+          type={props.type}
           inputFormat="MM/dd/yyyy"
-          value={value}
-          onChange={handleChange}
+          name={props.name}
+          value={props.value}
+          onChange={props.onChange}
+          // onChange={(event, value, name) => {handleChange(props.value, props.name)}}
           renderInput={(params) => <TextField {...params} />}
           className="txtField"
         />
@@ -101,6 +110,44 @@ export const BasicSelect = (props) => {
         >
           {props.menuItem.map((data) => (
             <MenuItem value={data.value}>{data.value}</MenuItem>
+          ))}
+          {/* <MenuItem value={>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
+        </Select>
+      </FormControl>
+    </Box>
+  );
+};
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
+// =============
+export const BasicSelectState = (props) => {
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">{props.label}</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={props.state}
+          name={props.name}
+          onChange={props.onChange}
+          label={props.label}
+        >
+          {props.menuItem.map((data) => (
+            <MenuItem value={data.state}>{data.state}</MenuItem>
           ))}
           {/* <MenuItem value={>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
