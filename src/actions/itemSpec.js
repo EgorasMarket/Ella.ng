@@ -10,7 +10,7 @@ import {
 //   API_URL3 as api_url3,
 } from "./types";
 
-export const submitItemSpec = (service, brand, model) => async (dispatch) => {
+export const submitItemSpec = (service, brand, model, itemState) => async (dispatch) => {
   //   console.log(payload1, pin);
   const config = {
     headers: {
@@ -19,7 +19,7 @@ export const submitItemSpec = (service, brand, model) => async (dispatch) => {
   };
 
   try {
-    const payload = JSON.stringify({ service, brand, model });
+    const payload = JSON.stringify({ service, brand, model, itemState });
 
     console.log(payload);
 

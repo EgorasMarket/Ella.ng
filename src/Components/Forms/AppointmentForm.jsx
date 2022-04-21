@@ -52,6 +52,20 @@ const AppointmentForm = ({onClick, submitItemSpecFull}) => {
     }
     // setSellData({ ...sellData, u: e });
   };
+  const LocationList = [
+    {
+        value: 'No 25 Clemedy Plaze, Aba Express Way, PH',
+        label: 'No 25 Clemedy Plaze, Aba Express Way, PH',
+    },
+    {
+        value: 'No 282 Aba Road by Rumuokwurushi Junction, PH',
+        label: 'No 282 Aba Road by Rumuokwurushi Junction, PH',
+    },
+    {
+        value: 'Kilometer Oro-owo, 7 Ikwerre Rd, Rumueme, Port Harcourt',
+        label: 'Kilometer Oro-owo, 7 Ikwerre Rd, Rumueme, Port Harcourt',
+    }
+];
   const menuItem = [
     {
       value: "Mobile Phone",
@@ -187,7 +201,7 @@ const AppointmentForm = ({onClick, submitItemSpecFull}) => {
           onChange={handleChange}
           value={closestBranch}
           name="closestBranch"
-          menuItem={menuItem}
+          menuItem={LocationList}
         />
 
         <TxtFieldInputDate

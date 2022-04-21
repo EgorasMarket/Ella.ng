@@ -11,10 +11,11 @@ const SaleForm = ({ submitItemSpec }) => {
     service: "",
     brand: "",
     model: "",
+    itemState: ""
   });
   const [appointmentDiv, setAppointmentDiv] = useState(false);
 
-  const { service, brand, model } = sellData;
+  const { service, brand, model, itemState } = sellData;
 
   const handleChange = (e) => {
     // console.log(e);
@@ -27,12 +28,12 @@ const SaleForm = ({ submitItemSpec }) => {
   const submitData = async (e) => {
     // alert('ok')
 
-    if (service === "" || brand === "" || model === "") {
+    if (service === "" || brand === "" || model === "" || itemState === "") {
       console.log("Please supply all fields");
     } else {
       console.log(service, brand, model);
 
-      let res3 = await submitItemSpec(service, brand, model);
+      let res3 = await submitItemSpec(service, brand, model, itemState);
 
       console.log(res3);
 
@@ -75,6 +76,19 @@ const SaleForm = ({ submitItemSpec }) => {
     },
   ];
 
+  const itemCondition = [
+    {
+      value: "New",
+    },
+    {
+      value: "Used",
+    },
+    {
+      value: "Refubished",
+    },
+
+  ]
+
   return (
     <div className="saleFormDiv">
       <div className="saleFormHeading">
@@ -114,6 +128,15 @@ const SaleForm = ({ submitItemSpec }) => {
           onChange={handleChange}
           value={model}
           name="model"
+        />
+        <BasicSelect
+          className="appointment_input_area"
+          labelId="Item Condition*"
+          label="Item Condition*"
+          onChange={handleChange}
+          value={itemState}
+          name="itemState"
+          menuItem={itemCondition}
         />
 
         <FunctionButton txt="Sell Now" click={submitData} />
