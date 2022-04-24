@@ -90,3 +90,11 @@ button:focus {
 .react-multiple-carousel__arrow--right {
   right: calc(4% + -55px) !important;
 }
+.css-1gyr8kh {
+  width: 100% !important;
+  max-width: 100%;
+}
+.css-ece9u5 {
+  min-width: 120px;
+  width: 100% !important;
+}
