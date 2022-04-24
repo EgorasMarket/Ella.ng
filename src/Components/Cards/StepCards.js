@@ -27,7 +27,8 @@ export const StepCards = () => {
           <div className="stepsDivAreaTitleCont">
             <div className="stepsDivAreaTitleContTitle">
               {" "}
-              Sell Your Gadget in 3 Steps{" "}
+              Sell Your Electronics & Electrical appliances
+              <br /> in 3 Steps{" "}
             </div>
             <div className="stepsDivAreaTitleContPara">
               {" "}

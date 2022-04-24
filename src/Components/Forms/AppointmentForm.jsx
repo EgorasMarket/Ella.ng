@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import LoadingIcons from "react-loading-icons";
+
 import {
   SuccessModal,
   ErrorModal,
@@ -23,6 +25,8 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
   const [errorModal, setErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [CautionModal, setCautionModal] = useState(false);
+  const [disable, setDisable] = React.useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [sellData, setSellData] = useState({
     id: localStorage.getItem("productID"),
     fullname: "",
@@ -89,8 +93,34 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
       value: "Oyigbo Branch",
     },
   ];
-
+  useEffect(() => {
+    if (fullname === "") {
+      setDisable(true);
+    }
+    if (phoneNumber === "") {
+      setDisable(true);
+    }
+    if (emailAddress === "") {
+      setDisable(true);
+    }
+    if (stateLocation === "") {
+      setDisable(true);
+    }
+    if (address === "") {
+      setDisable(true);
+    }
+    if (closestBranch === "") {
+      setDisable(true);
+    }
+    if (appointmentDate === "") {
+      setDisable(true);
+    } else {
+      setDisable(false);
+    }
+  });
   const submitData = async (e) => {
+    setDisable(true);
+    setIsLoading(true);
     // alert('ok')
     console.log(
       id,
@@ -135,6 +165,8 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
           console.log("Submitted successfully");
           // localStorage.setItem("productID", res3.data.entryId);
           localStorage.removeItem("productID");
+          setDisable(false);
+          setIsLoading(false);
         } else {
           setErrorModal(true);
           setSuccessModal(false);
@@ -142,8 +174,12 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
           setErrorMessage(res3.data.message);
           setErrorModal(true);
           console.log("Something went wrong, try again later.");
+          setDisable(false);
+          setIsLoading(false);
         }
       } else {
+        setDisable(false);
+        setIsLoading(false);
         setSuccessModal(false);
         setErrorModal(true);
         setErrorMessage("Please check your internet connection");
@@ -157,6 +193,7 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
       {successModal === true ? (
         <SuccessModal
           successMessage="Your appointment was booked successfully."
+          SuccessHead={fullname}
           click={PageReload}
         />
       ) : errorModal === true ? (
@@ -232,7 +269,19 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
               />
             </div>
             <div className="button_div">
-              <FunctionButton txt="Submit details" click={submitData} />
+              {isLoading ? (
+                <FunctionButton
+                  txt={<LoadingIcons.ThreeDots height="20px" width="100%" />}
+                  click={submitData}
+                  disabled={disable}
+                />
+              ) : (
+                <FunctionButton
+                  txt="Submit details"
+                  click={submitData}
+                  disabled={disable}
+                />
+              )}
             </div>
           </div>
         </div>

@@ -44,3 +44,10 @@
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 390px) {
+  .wave {
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}

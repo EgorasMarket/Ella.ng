@@ -1,7 +1,7 @@
 import React from "react";
 import "./success_error_component_style.css";
 import { FunctionButton } from "../Buttons/Button";
-export const SuccessModal = ({ successMessage, click }) => {
+export const SuccessModal = ({ successMessage, click, SuccessHead }) => {
   return (
     <div className="success_error_component">
       <div className="success_modal_div">
@@ -12,7 +12,11 @@ export const SuccessModal = ({ successMessage, click }) => {
             className="success_modal_image"
           />
         </div>
-        <div className="success_modal_div_body">{successMessage}</div>
+        <div className="success_modal_div_body_cont">
+          <div className="success_modal_div_body_Head">{SuccessHead}</div>
+          <div className="success_modal_div_body">{successMessage}</div>
+        </div>
+
         <div className="success_modal_button">
           <FunctionButton
             txt="Continue"

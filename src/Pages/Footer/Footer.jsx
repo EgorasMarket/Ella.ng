@@ -44,7 +44,6 @@ const Footer = () => {
           <div className="footerArea">
             <div className="header_logo">
               <img src="/img/ella_logo.svg" alt="" className="header_img" />
-              <span className="poweredBy">Powered by Egoras.</span>
             </div>
             <div className="footer_links_cont">
               {FooterLinks.map((data) => (
@@ -60,13 +59,32 @@ const Footer = () => {
                 </div>
               ))}
             </div>
+            <span className="law_write_up">
+              “Egoras” and “Egoras.com” are trademarks of Egoras Technologies
+              Limited, a company duly registered with CAC with{" "}
+              <span className="add_color">RC Number: 1832671. </span>
+              Egoras.com is a platform used for the provision of financial
+              services under a Multipurpose Co-operative License with
+              registration number <span className="add_color">34052</span>. The
+              Co-operative and Egoras Technologies Limited are duly registered
+              legal entities in Nigeria.
+              <br />
+              <br /> By the Co-operative’s Bye Law, every member of the
+              Co-operative shall subscribe to a minimum of one share and may
+              subscribe to additional shares subject to 20% maximum holding in
+              accordance with the provision of section 27 of the Nigerian
+              Co-operative Societies Act. Members of the Co-operative have their
+              shareholding represented in{" "}
+              <a href="/egc_token" className="add_color">
+                {" "}
+                Egoras Credit (EGC)
+              </a>
+              . However, possession of EGC is not proof of membership.
+            </span>
             <hr className="horizontal_rule" />
             <div className="footer_txt">
               ©️ 2022 Egoras Technologies LTD(RC - 1832671). All rights reserved
-              . Egoras Technologies ltd is a licensed pawnbroker and
-              moneylender. “Egoras” and “Egorasbank” are trademarks of Egoras
-              Technologies Ltd. 282 Aba Road by Rumuokrushi junction, port
-              Harcourt, Rivers state.
+              .
             </div>
           </div>
         </div>

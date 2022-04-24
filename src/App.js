@@ -15,8 +15,7 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
-            {/* <Route exact path="/book-appointment" component={BookAnAppointment} /> */}
+            <Route exact path="/" component={Home} />{" "}
           </Switch>
           <Footer />
         </div>

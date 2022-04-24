@@ -3,6 +3,7 @@ import "./Cards.css";
 import WaveAnimation from "../WaveAnimation/WaveAnimation";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import SaleForm from "../Forms/SaleForm";
 const responsive = {
   desktop: {
     // the naming can be any, depends on you.
@@ -49,7 +50,7 @@ const BgHeroCards = () => {
     <div className="hero_cards">
       <Carousel
         responsive={responsive}
-        // className="storiesCard"
+        className="hero_carousel"
         showDots={false}
         infinite={true}
         autoPlaySpeed={10000}
@@ -71,6 +72,23 @@ const BgHeroCards = () => {
           </div>
         ))}
       </Carousel>
+      <div className="hero_scroll_cards">
+        {BgHeroCards.map((data) => (
+          <div className={data.className} key={data.key}>
+            <div className="hero_card_area">
+              <div className="hero_card_area1">
+                <div className="hero_card_area1_title">{data.BgTitle}</div>
+                <div className="hero_card_area1_para">{data.BgPara}</div>
+              </div>
+              <div className="hero_card_area2">
+                <img src={data.img} alt="..." className="hero_card_img" />
+              </div>
+            </div>
+            <WaveAnimation />
+            <img src="/img/banner-bg.png" className="banner-bg" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

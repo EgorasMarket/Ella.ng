@@ -4,26 +4,28 @@ const WhyPeopleTrustUs = () => {
   const Steps = [
     {
       stepImg: "/img/icon-tick.svg",
-      stepTitle: "One-stop Solution",
-      stepTxt: "Sell, buy, repair or accessorize your smartphone",
+      stepTitle: "Your Funds in 5mins",
+      stepTxt: "Instant payment after evaluation of device.",
     },
     {
       stepImg: "/img/icon-tick.svg",
 
-      stepTitle: "One-stop Solution",
-      stepTxt: "Sell, buy, repair or accessorize your smartphone",
+      stepTitle: "Amazing Prices",
+      stepTxt: "We buy devices instantly at awesome prices.",
     },
     {
       stepImg: "/img/icon-tick.svg",
 
-      stepTitle: "One-stop Solution",
-      stepTxt: "Sell, buy, repair or accessorize your smartphone",
+      stepTitle: "Quick & Hassle-free",
+      stepTxt:
+        "Book appointments at the nearest Ella branch within your locality.",
     },
     {
       stepImg: "/img/icon-tick.svg",
 
-      stepTitle: "One-stop Solution",
-      stepTxt: "Sell, buy, repair or accessorize your smartphone",
+      stepTitle: "Best Value For Your Device",
+      stepTxt:
+        "Our advanced AI tech will make the perfect value for your devices.",
     },
   ];
   return (

@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <section className="hero_section">
         <BgHeroCards />
-        <SaleForm />
+        <SaleForm cssClass="salesForm" />
       </section>
       <section className="iconsCardsSection">
         <IconCards />

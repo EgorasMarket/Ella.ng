@@ -21,7 +21,12 @@ export const SignUpButton = (props) => {
 export const FunctionButton = (props) => {
   return (
     <>
-      <button className={`${props.className} LoginBtn`} onClick={props.click}>
+      <button
+        className={`${props.className} LoginBtn`}
+        onClick={props.click}
+        disabled={props.disabled}
+      >
+        {props.icon}
         {props.txt}
       </button>
     </>

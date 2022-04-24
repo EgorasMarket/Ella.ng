@@ -46,3 +46,59 @@
   transform: translate3d(0, -5px, 0);
   transition: 0.3s ease-in-out;
 }
+@media screen and (max-width: 700px) {
+  .sounds_good_area {
+    background: var(--bs-l-mode-default-green);
+    min-height: 240px;
+    border-radius: 10px;
+    /* box-shadow: 0px 18px 40px var(--bs-l-mode-default-green-shadow); */
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sounds_good_area_txt_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sounds_good_area_txt_cont_txt {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--bs-l-mode-default-color);
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sounds_good_area {
+    background: var(--bs-l-mode-default-green);
+    min-height: 161px;
+    border-radius: 10px;
+    /* box-shadow: 0px 18px 40px var(--bs-l-mode-default-green-shadow); */
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sounds_good_area_txt_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .sounds_good_area_txt_cont_txt {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bs-l-mode-default-color);
+    text-align: center;
+  }
+}

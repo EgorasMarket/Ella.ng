@@ -8,6 +8,14 @@
 .header_img {
   width: 120px;
 }
+
+.mobile_display_btns {
+  display: none;
+}
+
+.sellNowDivOpenBtn {
+  display: none;
+}
 .headerContainer {
   display: flex;
   flex-direction: column;
@@ -20,14 +28,17 @@
 }
 .header_logo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  gap: 10px;
 }
 .poweredBy {
   font-size: 10px;
   font-weight: 700;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   width: 100%;
   justify-content: flex-end;
 }
@@ -36,15 +47,101 @@
   align-items: center;
   justify-content: space-between;
 }
+.vl2 {
+  width: 3px;
+  height: 40px;
+  background: #7c9a8f;
+}
+
+.powered_by_img {
+  width: 60px;
+}
 .header_link {
   color: var(--bs-l-mode-default-black-color);
   font-size: 13px;
   font-weight: 600;
   margin-right: 20px;
 }
+.header_link:hover {
+  color: var(--bs-l-mode-default-green);
+}
 .vl {
   width: 1.5px;
   height: 34px;
   background: var(--bs-l-mode-default-light-green2);
   margin-right: 15px;
+}
+.menu_icon {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+  .menu_icon {
+    display: inline-block !important;
+    cursor: pointer;
+    font-size: 32px !important;
+  }
+  .header_link_area {
+    display: none;
+  }
+  .sellNowDivOpenBtn {
+    display: block;
+    width: 75%;
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+  .mobile_display_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    gap: 10px;
+  }
+  .header_sale_form {
+    width: 100%;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    max-width: 100%;
+    left: 0;
+    box-shadow: none;
+  }
+  .header_sale_form_div {
+    position: fixed;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column-reverse;
+    animation: LeftGrow 0.3s linear;
+  }
+
+  @keyframes LeftGrow {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  .header_sale_remove_icon {
+    font-size: 20px !important;
+    border: 1px solid;
+    margin-right: 5px;
+    border-radius: 50px;
+    padding: 1px;
+  }
+  .header_sale_remove_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header_img {
+    width: 85px;
+  }
 }
