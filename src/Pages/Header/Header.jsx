@@ -36,7 +36,7 @@ const Header = () => {
             {/* <SearchBar placeHolder="Start typing..." /> */}
             <div className="mobile_display_btns">
               <FunctionButton
-                txt="SellNow"
+                txt="Sell Now"
                 className="sellNowDivOpenBtn"
                 click={ToggleSaleForm}
               />
