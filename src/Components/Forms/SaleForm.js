@@ -57,13 +57,13 @@ const SaleForm = ({ submitItemSpec, cssClass }) => {
     setIsLoading(true);
     if (service === "" || brand === "" || model === "" || itemState === "") {
       setDisable(true);
-      console.log("Please supply all fields");
+      // console.log("Please supply all fields");
     } else {
-      console.log(service, brand, model);
+      // console.log(service, brand, model);
       setDisable(false);
       let res3 = await submitItemSpec(service, brand, model, itemState);
 
-      console.log(res3);
+      // console.log(res3);
 
       if (res3.data.success === true) {
         setDisable(false);
@@ -73,7 +73,7 @@ const SaleForm = ({ submitItemSpec, cssClass }) => {
       } else {
         setDisable(false);
         setIsLoading(false);
-        console.log("Something went wrong, try again later.");
+        // console.log("Something went wrong, try again later.");
       }
     }
   };

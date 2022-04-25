@@ -49,7 +49,6 @@ export const TxtFieldInputNumber = (props) => {
         name={props.name}
         value={props.value}
         onChange={props.onChange}
-
       />
     </Box>
   );
@@ -58,7 +57,7 @@ export const TxtFieldInputDate = (props) => {
   const [value, setValue] = React.useState(new Date("mm/dd/yyyy"));
 
   function handleChange(inputVal, inputName) {
-    console.log(inputVal, inputName);
+    // console.log(inputVal, inputName);
     // Here, we invoke the callback with the new value
     props.onChange(inputVal, inputName);
   }

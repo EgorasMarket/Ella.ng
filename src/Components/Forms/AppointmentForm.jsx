@@ -122,17 +122,17 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
     setDisable(true);
     setIsLoading(true);
     // alert('ok')
-    console.log(
-      id,
-      fullname,
-      phoneNumber,
-      emailAddress,
-      stateLocation,
-      // itemState,
-      address,
-      appointmentDate,
-      closestBranch
-    );
+    // console.log(
+    //   id,
+    //   fullname,
+    //   phoneNumber,
+    //   emailAddress,
+    //   stateLocation,
+    //   // itemState,
+    //   address,
+    //   appointmentDate,
+    //   closestBranch
+    // );
 
     if (
       fullname === "" ||
@@ -142,7 +142,7 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
       appointmentDate === "" ||
       closestBranch === ""
     ) {
-      console.log("Please supply all fields");
+      // console.log("Please supply all fields");
     } else {
       if (navigator.onLine) {
         let res3 = await submitItemSpecFull(
@@ -157,12 +157,12 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
           closestBranch
         );
 
-        console.log(res3);
+        // console.log(res3);
 
         if (res3.data.success === true) {
           setSuccessModal(true);
           // setAppointmentDiv(true);
-          console.log("Submitted successfully");
+          // console.log("Submitted successfully");
           // localStorage.setItem("productID", res3.data.entryId);
           localStorage.removeItem("productID");
           setDisable(false);
@@ -170,10 +170,10 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
         } else {
           setErrorModal(true);
           setSuccessModal(false);
-          console.log(res3.data.message);
+          // console.log(res3.data.message);
           setErrorMessage(res3.data.message);
           setErrorModal(true);
-          console.log("Something went wrong, try again later.");
+          // console.log("Something went wrong, try again later.");
           setDisable(false);
           setIsLoading(false);
         }
@@ -183,7 +183,7 @@ const AppointmentForm = ({ onClick, submitItemSpecFull }) => {
         setSuccessModal(false);
         setErrorModal(true);
         setErrorMessage("Please check your internet connection");
-        console.log("Please check your internet connection");
+        // console.log("Please check your internet connection");
       }
     }
   };
