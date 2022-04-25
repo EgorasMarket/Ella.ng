@@ -29,6 +29,7 @@
 @media screen and (max-width: 991px) {
   .BestOffersDivArea_Cards_Area_Card1_img {
     width: 20em;
+    border-radius: 6px;
   }
   .BestOffersDivArea_Cards_Area_Card1 {
     border-radius: 10px;
