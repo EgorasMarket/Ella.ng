@@ -30,11 +30,6 @@ export const StepCards = () => {
               Sell Your Electronics & Electrical appliances
               <br /> in 3 Steps{" "}
             </div>
-            <div className="stepsDivAreaTitleContPara">
-              {" "}
-              Book a free pickup from your home or work at a time slot as
-              <br /> per your convenience
-            </div>
           </div>
           <div className="stepsDivAreaBody">
             {stepsDiv.map((data) => (
